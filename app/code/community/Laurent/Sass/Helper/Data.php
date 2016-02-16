@@ -59,16 +59,16 @@ class Laurent_Sass_Helper_Data extends Mage_Core_Helper_Abstract
             switch ($config['output_style']) {
                 case Laurent_Sass_Model_Config_Style::STYLE_COMPACT:
                 default:
-                    $formatter = 'scss_formatter_crunched';
+                    $formatter = 'Leafo\ScssPhp\Formatter\Compact';
                     break;
                 case Laurent_Sass_Model_Config_Style::STYLE_NESTED:
-                    $formatter = 'scss_formatter_nested';
+                    $formatter = 'Leafo\ScssPhp\Formatter\Nested';
                     break;
                 case Laurent_Sass_Model_Config_Style::STYLE_COMPRESSED:
-                    $formatter = 'scss_formatter_compressed';
+                    $formatter = 'Leafo\ScssPhp\Formatter\Compressed';
                     break;
                 case Laurent_Sass_Model_Config_Style::STYLE_EXPANDED:
-                    $formatter = 'scss_formatter';
+                    $formatter = 'Leafo\ScssPhp\Formatter\Expanded';
                     break;
             }
             $compiler->setFormatter($formatter);
